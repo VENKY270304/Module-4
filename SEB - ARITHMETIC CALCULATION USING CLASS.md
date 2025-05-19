@@ -35,11 +35,19 @@ To write a Python program to perform addition and division operations using a cl
 ### PROGRAM
 
 ```
-
-
-
+a=int(input())
+b=int(input())
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a//b)
+print(a%b)
+print(a**b)
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/9653136b-d6d1-4ec0-9d74-bc87ff4c2edd)
 
 ### RESULT
+Thus, a Python program to perform arithmetic operations using a class are verified.
