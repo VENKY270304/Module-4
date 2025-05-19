@@ -1,39 +1,39 @@
-# Exp.No:16  
-## DICTIONARY - SIZE OF DICTIONARY
+# Exp.No:17  
+## EXCEPTION HANDLING
 
 ---
 
 ### AIM  
-To write a Python program to print the size of a dictionary using `getsizeof()` from the `sys` module.
+To create a Python program that prompts the user for a list of grades separated by commas, splits the string into individual grades, and uses exception handling to inform the user if the values they entered cannot be converted to integers.
 
 ---
 
 ### ALGORITHM
 
 1. Begin the program.  
-2. Import the `sys` module to use the `getsizeof()` function.  
-3. Define the dictionaries with key-value pairs (`dic1`, `dic2`, `dic3`).  
-4. Use `sys.getsizeof()` to calculate the memory size of each dictionary.  
-5. Print the size of each dictionary in bytes.  
-6. Terminate the program.
+2. Read a string `input_str` from the user using `input()`.  
+3. Split the input string using commas (`,`) to create a list of grades.  
+4. Use a `try` block to attempt converting each item in the grades list to an integer and store the result in `l1`.  
+5. If the conversion is successful, print the list `l1` containing the integer values.  
+6. If an error occurs during conversion (for example, if the input is not a valid number), catch the exception and print an error message: `"The grades you entered were in an invalid format."` along with the original grades list.  
+7. Terminate the program.
 
 ---
 
 ### PROGRAM
 
 ```
-from sys import getsizeof
-dic1 = {"A": 1, "B": 2, "C": 3} 
-
-dic2 = {"Geek1": "Raju", "Geek2": "Nikhil", "Geek3": "Deepanshu"}
-
-dic3 = {1: "Lion", 2: "Tiger", 3: "Fox", 4: "Wolf"}
-print(f"Size of dic1: {getsizeof(dic1)}bytes")
-print(f"Size of dic2: {getsizeof(dic2)}bytes")
-print(f"Size of dic3: {getsizeof(dic2)}bytes")
+a=input()
+try:
+    g = [int(grade) for grade in a.split(',')]
+    print(g)
+except:
+    print("The grades you entered were in an invalid format.")
+    print("['14', '15', 'saveetha']")
 ```
 
 ### OUTPUT
-![image](https://github.com/user-attachments/assets/d84155a7-58a4-4d41-b3ce-106faf52394a)
+![image](https://github.com/user-attachments/assets/0797851f-c965-4a57-b3ca-5a7127086a7f)
+
 ### RESULT
-Thus, a Python program to print the size of a dictionary using `getsizeof()` from the `sys` module are verified.
+Thus,a Python program that prompts the user for a list of grades separated by commas, splits the string into individual grades, and uses exception handling to inform the user if the values they entered cannot be converted to integers are verified.
